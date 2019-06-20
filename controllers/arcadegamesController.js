@@ -4,7 +4,7 @@ exports.index = (req, res) => {
   console.log("index");
   ArcadeGame.find()
     .then(arcadegames => {
-      res.render("/index", {
+      res.render("resources/index", {
         arcadegames: arcadegames,
         title: "GamseList"
       });
@@ -20,7 +20,7 @@ exports.show = (req, res) => {
     _id: req.params.id
   })
     .then(arcadegame => {
-      res.render("/show", {
+      res.render("resources/show", {
         arcadegame: arcadegame,
         title: arcadegame.title
       });
@@ -32,7 +32,7 @@ exports.show = (req, res) => {
 };
 
 exports.new = (req, res) => {
-  res.render("/new", {
+  res.render("resources/new", {
     title: "New Game"
   });
 };
@@ -42,7 +42,7 @@ exports.edit = (req, res) => {
     _id: req.params.id
   })
     .then(arcadegame => {
-      res.render("/edit", {
+      res.render("resources/edit", {
         arcadegame: arcadegame,
         title: arcadegame.title
       });

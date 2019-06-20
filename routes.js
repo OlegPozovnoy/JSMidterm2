@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 // Importing the pageRoutes
-const resourcesRoutes = require("./routes/resources");
+const resourcesRoutes = require("./routes/arcadegames");
 
 // Our home page
 app.get("/home", (req, res) => {
