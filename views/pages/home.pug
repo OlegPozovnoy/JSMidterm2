@@ -1,0 +1,158 @@
+extends ../layouts/main.pug
+block content
+  .home.container-fluid.max-height
+    .row.max-height
+      .col-sm-5.max-height.flexit
+        .divy
+          header.ml-5
+            h1 Midterm Thursday
+              br
+              small COMP-2068
+          .card.objective
+            .card-body
+              h5.card-title Objective
+              hr
+              .card-text.mt-3
+                p
+                  | The 80's arcade is back! But we need someway to document all the awesomeness that are 80's video games! It is your job to build an application that will store a catalogue of video games available to arcade systems.
+
+      .col-sm-7.max-height.flexit
+        ul.tasks
+          li.card
+            .card-body
+              h5.card-title Task #1
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create/Repair a new model called ArcadeGame with the following attributes:
+                ul.ml-2
+                  li
+                    | Title
+                  li
+                    | Rating
+                  li
+                    | Description
+                  li
+                    | Genre (enum) [fighting, sports, strategy, puzzle, arcade, platformer, other]
+          li.card
+            .card-body
+              h5.card-title Task #2
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create/Repair a new controller to manage the views and model with the following actions:
+                ul.ml-2
+                  li
+                    | index
+                  li
+                    | show
+                  li
+                    | new
+                  li
+                    | edit
+                  li
+                    | create
+                  li
+                    | update
+                  li
+                    | destroy
+          li.card
+            .card-body
+              h5.card-title Task #3
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create/Repair the necessary routes to point to each controller action:
+                ul.ml-2
+                  li
+                    | index
+                  li
+                    | show
+                  li
+                    | new
+                  li
+                    | edit
+                  li
+                    | create
+                  li
+                    | update
+                  li
+                    | destroy
+          li.card
+            .card-body
+              h5.card-title Task #4
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create/Repair the necessary views to facilitate CRUD of an arcade game:
+                ul.ml-2
+                  li
+                    | index
+                  li
+                    | show
+                  li
+                    | new
+                  li
+                    | edit
+                  li
+                    | form (partial)
+          li.card
+            .card-body
+              h5.card-title Task #5
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create a .env file and add the correct MongoDB connection details:
+                ul.ml-2
+                  li
+                    | DB_URL
+                  li
+                    | DB_USER
+                  li
+                    | DB_PASS
+          li.card
+            .card-body
+              h5.card-title Task #6
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Repair the app.js file so you can connect to Mongo:
+          li.card
+            .card-body
+              h5.card-title Task #7
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Deploy your application to the internet and submit your link and a GitHub repository link with your files:
+          li.card
+            .card-body
+              h5.card-title NOTE!!!
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Your model, controller, routes, and views must be for an ArcadeGame. They cannot contain any reference to "Resource" or be any copy/paste content from the Blog project. BIG PENALTY for failing to follow this instruction. (-2% for every misreference)
+    

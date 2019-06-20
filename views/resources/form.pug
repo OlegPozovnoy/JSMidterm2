@@ -1,0 +1,15 @@
+form(action=(arcadegame ? `/arcadegames/update` : "/arcadegames"), method="POST")
+  if arcadegame
+    input(type="hidden", name="id", value=arcadegame.id)
+
+  .form-group
+    label Title
+    input.form-control(name="arcadegame[title]", required, value=(resource ? resource.title : null))
+
+  .form-group
+    label Rating
+    textarea.form-control(name="arcadegame[rating]")
+      = arcadegame ? arcadegame.rating : null
+  
+  .form-group
+    button.btn.btn-dark(type="submit") Submit

@@ -1,0 +1,25 @@
+extends ../layouts/main.pug
+block content
+  .container
+    header
+      h1= title
+
+    div
+      table.table.table-striped
+        thead
+          tr
+            th Title
+            th Actions
+        
+        tbody
+          each arcadegame in arcadegames
+            tr
+              td
+                a(href=`/arcadegames/${arcadegame.id}`)= arcadegame.title
+              td
+                a(href=`/arcadegames/${arcadegame.id}/edit`) edit
+                = ` | `
+                form.destroy(action=`/arcadegames/destroy`, method="POST", onsubmit='return confirm("Are you sure you wish to destroy this beautiful resource?")')
+                  input(type="hidden", name="id", value=`${arcadegame.id}`)
+                  input.destroy(type="submit", value="destroy")
+          
