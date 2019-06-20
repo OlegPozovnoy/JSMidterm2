@@ -6,7 +6,7 @@ const app = express();
 const resourcesRoutes = require("./routes/arcadegames");
 
 // Our home page
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
   res.render("pages/home");
 });
 

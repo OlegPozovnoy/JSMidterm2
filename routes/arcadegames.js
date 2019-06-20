@@ -6,7 +6,7 @@ const ArcadeGamesController = require("../controllers/arcadegamesController");
 
 // Our routes
 
-router.get("/", ArcadeGamesController.index);
+router.get("/home", ArcadeGamesController.index);
 router.get("/new", ArcadeGamesController.new);
 router.get("/:id", ArcadeGamesController.show);
 router.get("/:id/edit", ArcadeGamesController.edit);

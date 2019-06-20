@@ -11,7 +11,7 @@ exports.index = (req, res) => {
     })
     .catch(err => {
       req.flash("error", `ERROR: ${err}`);
-      res.redirect("/");
+      res.redirect("/home");
     });
 };
 
@@ -27,7 +27,7 @@ exports.show = (req, res) => {
     })
     .catch(err => {
       req.flash("error", `ERROR: ${err}`);
-      res.redirect("/");
+      res.redirect("home");
     });
 };
 
@@ -49,7 +49,7 @@ exports.edit = (req, res) => {
     })
     .catch(err => {
       req.flash("error", `ERROR: ${err}`);
-      res.redirect("/");
+      res.redirect("/home");
     });
 };
 
@@ -57,7 +57,7 @@ exports.create = async (req, res) => {
   ArcadeGame.create(req.body.arcadegame)
     .then(() => {
       console.log("New game was created successfully.");
-      res.redirect("/");
+      res.redirect("/home");
     })
     .catch(err => {
       req.flash("error", `ERROR: ${err}`);
@@ -79,11 +79,11 @@ exports.update = (req, res) => {
   )
     .then(() => {
       console.log("The game was updated successfully.");
-      res.redirect(`/`);
+      res.redirect(`/home`);
     })
     .catch(err => {
       req.flash("error", `ERROR: ${err}`);
-      res.redirect(`/`);
+      res.redirect(`/home`);
     });
 };
 
@@ -93,10 +93,10 @@ exports.destroy = (req, res) => {
   })
     .then(() => {
       console.log("The game was deleted successfully.");
-      res.redirect("/");
+      res.redirect("/home");
     })
     .catch(err => {
       req.flash("error", `ERROR: ${err}`);
-      res.redirect(`/`);
+      res.redirect(`/home`);
     });
 };
